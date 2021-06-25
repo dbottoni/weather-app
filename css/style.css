@@ -14,10 +14,6 @@
   padding: 5px;
 }
 
-/* .container3{
-  width: 100%;
-} */
-
 .searchBox {
   cursor: pointer;
   width: auto;
@@ -53,22 +49,8 @@
   text-align: left;
 }
 
-
-
-#btn {
+/* #btn{
   width: 200px;
   margin-bottom: 5px;
   border-radius: 5px;
-}
-
-/*.btn-group button {
-  background-color: lightgray;
-  border: none;
-  color: black;
-  padding: 10px 24px;
-  cursor: pointer;
-  width: 200px;
-  display: block;
-  margin: 10px;
-  border-radius: 10px;
 } */
