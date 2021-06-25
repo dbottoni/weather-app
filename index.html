@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Weather Dashboard</title>
+</head>
+<body>
+  <h1 class="header">Weather Dashboard</h1>
+  <div class="row">
+    <div class="sidebar col-2">
+      <!--can remove div class = container1-->
+      <div class = "container1">
+        <h2>Search for a City</h2>
+        <input type="text" class="searchBox" id="searchTerm" placeholder="Enter City" autofocus>
+        <!-- !<textarea id="searchTerm" placeholder="Enter City"></textarea> -->
+        <button onclick="searchFunction()" class="searchButton">Search</button>
+        <hr>
+        <div class="col-4 btn-group-vertical">
+          <button type="button" class="btn btn-secondary" id="btn">Austin</button>
+          <button type="button" class="btn btn-secondary" id="btn">Chicago</button>
+          <button type="button" class="btn btn-secondary" id="btn">New York</button>
+          <button type="button" class="btn btn-secondary" id="btn">Orlando</button>
+          <button type="button" class="btn btn-secondary" id="btn">San Francisco</button>
+          <button type="button" class="btn btn-secondary" id="btn">Seattle</button>
+          <button type="button" class="btn btn-secondary" id="btn">Denver</button>
+          <button type="button" class="btn btn-secondary" id="btn">Atlanta</button>
+        </div>
+      </div>
+    </div>
+  
+    <main class="content col-8">
+      <div class="container2">
+        <h2 id="city"> 🌥</h2>
+        <p id="temp">Temp:</p>    
+        <p id="wind">Wind:</p>    
+        <p id="Humidity">Humidity:</p>    
+        <p id="uvindex">UV Index:</p>    
+        </div>
+      <div class="container3">
+        <h3>5-Day Forecast</h3>
+        <div class="card col-sm">
+          <h4 class="card-title" id="card-date">Date</h4>
+          <p class="card-icon">Icon</p>
+          <p class="card-temp">Temp:</p>
+          <p class="card-wind">Wind:</p>
+          <p class="card-humidity">Humidity:</p>
+        </div>
+        <div class="card col-sm">
+          <h4 class="card-title" id="card-date">Date</h4>
+          <p class="card-icon">Icon</p>
+          <p class="card-temp">Temp:</p>
+          <p class="card-wind">Wind:</p>
+          <p class="card-humidity">Humidity:</p>
+        </div>
+        <div class="card col-sm">
+          <h4 class="card-title" id="card-date">Date</h4>
+          <p class="card-icon">Icon</p>
+          <p class="card-temp">Temp:</p>
+          <p class="card-wind">Wind:</p>
+          <p class="card-humidity">Humidity:</p>
+        </div>
+        <div class="card col-sm">
+          <h4 class="card-title" id="card-date">Date</h4>
+          <p class="card-icon">Icon</p>
+          <p class="card-temp">Temp:</p>
+          <p class="card-wind">Wind:</p>
+          <p class="card-humidity">Humidity:</p>
+        </div>
+        <div class="card col-sm">
+          <h4 class="card-title" id="card-date">Date</h4>
+          <p class="card-icon">Icon</p>
+          <p class="card-temp">Temp:</p>
+          <p class="card-wind">Wind:</p>
+          <p class="card-humidity">Humidity:</p>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+</html>
