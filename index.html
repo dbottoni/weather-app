@@ -18,10 +18,10 @@
         <h2>Search for a City</h2>
         <input type="text" class="searchBox" id="searchTerm" placeholder="Enter City" autofocus>
         <!-- !<textarea id="searchTerm" placeholder="Enter City"></textarea> -->
-        <button onclick="searchFunction()" class="searchButton btn-primary">Search</button>
+        <button class="searchButton btn-primary" id="searchBtn">Search</button>
         <hr>
         <div class="btn-group-vertical">
-          <button onclick="austinWeather()" class="btn btn-secondary" style="width:200px; margin-bottom: 5px; border-radius: 5px;" id="btn">Austin</button>
+          <button class="btn btn-secondary" style="width:200px; margin-bottom: 5px; border-radius: 5px;" id="btn">Austin</button>
           <button class="btn btn-secondary" id="btn">Chicago</button>
           <button class="btn btn-secondary" id="btn">New York</button>
           <button class="btn btn-secondary" id="btn">Orlando</button>
@@ -36,11 +36,11 @@
     <main class="content col-9">
       <div class="row">
         <div class="container2" id="reponse-container">
-          <div id="city"></div>
-          <p id="temp">Temp:</p>    
-          <p id="wind">Wind:</p>    
-          <p id="Humidity">Humidity:</p>    
-          <p id="uvindex">UV Index:</p>    
+          <h2 class="city">City:</h2>
+          <p class="temp">Temp:</p>    
+          <p class="wind">Wind:</p>    
+          <p class="humidity">Humidity</p>    
+          <p class="uvindex">UVIndex</p>    
         </div>
       </div>
       <h3>5-Day Forecast</h3>
