@@ -1,12 +1,21 @@
 .header {
   text-align: center;
-  background-image: linear-gradient(to right, rgb(97, 203, 238), rgb(4, 4, 179));
+  background-image: linear-gradient(
+    to right,
+    rgb(97, 203, 238),
+    rgb(4, 4, 179)
+  );
   color: white;
   padding: 10px;
 }
 .sidebar {
   width: auto;
 }
+
+/* .content{
+  left: 25%;
+  right: auto;
+} */
 
 .container2 {
   border: 1px solid black;
@@ -49,8 +58,32 @@
   text-align: left;
 }
 
-/* #btn{
+#btn{
   width: 200px;
   margin-bottom: 5px;
   border-radius: 5px;
-} */
+}
+
+@media only screen and (max-width: 733px) {
+  /* .content {
+    margin-left: 100px; 
+    height: 300px;
+    width: 50px;
+  } */
+  #btn {
+    display: none;
+  }
+
+  h2 {
+    margin-left: 30px;
+    font-size: 1px;
+  }
+
+  .searchBox .searchButton {
+    margin-left: 30px;
+  }
+
+  main {
+    margin-left: 50px;
+  }
+}

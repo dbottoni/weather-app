@@ -1,9 +1,10 @@
 function austinWeather(){
   var austin = document.getElementById('#btnAustin').value;
   fetch(
-    'https://api.openweathermap.org/data/2.5/onecall?lat=30.2672&lon=-97.7431&appid=fabb0e1d664af0eebed6cbacc7200253' + 
-    austin + 
-    '&api_key=fabb0e1d664af0eebed6cbacc7200253'
+    // 'https://api.openweathermap.org/data/2.5/onecall?lat=30.2672&lon=-97.7431&appid=fabb0e1d664af0eebed6cbacc7200253' + 
+    // austin + 
+    // '&api_key=fabb0e1d664af0eebed6cbacc7200253'
+    'https://api.openweathermap.org/data/2.5/forecast/daily?q=Austin,TX,US&cnt={cnt}&appid={API key}'
   )
     .then(function (response) { 
       return response.json();
