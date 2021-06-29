@@ -11,12 +11,12 @@
 </head>
 <body>
   <h1 class="header">Weather Dashboard</h1>
-  <div class="row">
+  <main class="row">
     <div class="sidebar col-3">
       <!--can remove div class = container1-->
-      <div class = "container1">
+      <div class ="container1" id="city-box">
         <h2>Search for a City</h2>
-        <input type="text" class="searchBox" id="searchTerm" placeholder="Enter City" autofocus>
+        <input type="text" class="searchBox" id="searchterm" placeholder="Enter City" autofocus>
         <!-- !<textarea id="searchTerm" placeholder="Enter City"></textarea> -->
         <button class="searchButton btn-primary" id="searchBtn">Search</button>
         <hr>
@@ -32,8 +32,9 @@
         </div>
       </div>
     </div>
-  
-    <main class="content col-9">
+
+
+    <div class="content col-9">
       <div class="row">
         <div class="container2" id="reponse-container">
           <h2 class="city">City:</h2>
@@ -43,6 +44,17 @@
           <p class="uvindex">UVIndex</p>    
         </div>
       </div>
+
+      <!-- Added this block 49-54
+        <div class="col-12 col-md-8">
+          <h2 class="subtitle">Showing Repositories for: <span id="repo-search-term"></span></h2>
+          <div id="day0" class="list-group">Day1</div>
+          <div id="day1" class="list-group">Day2</div>
+          </div>
+        </div>
+ -->
+
+
       <h3>5-Day Forecast</h3>
       <div class="row">
         <div class="container3">
@@ -93,8 +105,8 @@
           </div>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
   <script src="./js/script.js"></script>
 </body>
 </html>
