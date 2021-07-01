@@ -16,3 +16,6 @@
 
 ### Mock Up Image
 ![image](https://user-images.githubusercontent.com/72705457/123330716-5e19b900-d50c-11eb-9888-f4f7d4832a5a.png)
+
+### Image of Current Site
+![image](https://user-images.githubusercontent.com/72705457/124193623-245d2b00-da95-11eb-9b75-e2cc83016460.png)
