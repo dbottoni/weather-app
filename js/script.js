@@ -6,7 +6,7 @@ var wind = document.querySelector('.wind');
 var humidity = document.querySelector('.humidity');
 var uvindex = document.querySelector('.uvindex');
 var fiveDayContainer = document.querySelector('.five-day-container');
-var savedButton = document.querySelectorAll('.saved-button');
+var savedButton = document.querySelector('.saved-button');
 
 function fetchWeatherData(cityName){
 fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
@@ -22,7 +22,7 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
     city.innerHTML = nameValue;
     temp.innerHTML = "Temp: " + tempValue;
     wind.innerHTML = "Wind Speed: " + windValue;
-    humidity.innerHTML = "Humidity: " + humidValue;
+    humidity.innerHTML = "Humidity: " + humidValue + "%";
   
 
     fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=fabb0e1d664af0eebed6cbacc7200253`)
@@ -36,26 +36,8 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
       
   
       // Insert Date in Cards
-      // var date = [1,2,3,4,5];
-      // var now = moment();
-      // var weatherDate = moment().format("MM-DD")
-
-      // for (var i = 0; i < date.length; i++){
-      //   if (now < weatherDate[i]){
-      //     $(`#card-date-${date[i]}`);
-      //   }
-      // }
-
-      // Insert Icon in Cards
-      var iconDate = [1,2,3,4,5];
-
-      for (var i = 0; i < iconDate.length; i++){
-
-          var iconDay = data['daily'][i]['weather'][i]['description'];
-          var iconEl = document.getElementById(`icon-${iconDate[i]}`);
-          iconEl.innerHTML = iconDay;
-      }
-
+  
+      
       // Insert Temp in Cards
       var cardTemp = [1,2,3,4,5]; 
 
@@ -110,3 +92,28 @@ searchButton.addEventListener('click', function(){
 
 
 //  });
+
+// This fetches data but doesn't return the icon 
+
+// function fetchIcon(iconCode){
+// fetch ('http://openweathermap.org/img/w/='+ iconCode +
+//   '.png')
+//   .then(response=> response.json())
+//   .then(data => {
+
+//  // Insert Icon in Cards
+//       var iconDate = [1,2,3,4,5];
+//       var iconcode = a.weather[0].icon;
+//       //var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+
+//       for (var i = 0; i < iconDate.length; i++){
+
+//           //var iconDay = data['daily'][i]['weather'][i]['description'];       
+//           var iconData = data['daily'][i]['weather'][i]['description'];
+//           var iconEl = document.getElementById($('#wicon').attr('src', iconData));
+        
+//           iconEl.innerHTML = iconData;
+//       }
+      
+//     });
+//   }
