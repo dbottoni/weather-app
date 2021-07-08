@@ -20,7 +20,9 @@
         <!-- !<textarea id="searchTerm" placeholder="Enter City"></textarea> -->
         <button class="searchButton btn-primary" id="searchBtn">Search</button>
         <hr>
-        <!-- <div class="btn-group-vertical">
+
+        <div class="searchList"></div>
+       <!-- <div class="btn-group-vertical">
           <button class="btn btn-secondary saved-button-0" id="btn">Austin</button>
           <button class="btn btn-secondary saved-button-1" id="btn">Chicago</button>
           <button class="btn btn-secondary saved-button-2" id="btn">New York</button>
@@ -38,10 +40,11 @@
       <div class="row">
         <div class="container2" id="reponse-container">
           <h2 class="city">City:</h2>
+          <p class="date"> Date: </p>
           <p class="temp">Temp:</p>    
           <p class="wind">Wind:</p>    
           <p class="humidity">Humidity</p>    
-          <p class="uvindex">UVIndex</p>    
+          <p class="uvindex" id="uv-color">UVIndex</p>    
         </div>
       </div>
 
@@ -52,7 +55,7 @@
           <div class="card col-sm" style="background-color: #1b3752; color: white;">
             <div class="card-body" id="conditions">
               <h4 class="card-title" id="card-date-1">Date</h4>
-              <p class="card-icon" id="icon-1">Icon</p>
+              <img class="card-icon" id="wicon-1" src="" alt="Weather icon">
               <p class="card-temp" id="card-temp-1">Temp:</p>
               <p class="card-wind" id="wind-1">Wind:</p>
               <p class="card-humidity" id="humid-1">Humidity:</p>
@@ -61,7 +64,7 @@
           <div class="card col-sm" style="background-color: #1b3752; color: white;">
             <div class="card-body" id="conditions">
               <h4 class="card-title" id="card-date-2">Date</h4>
-              <p class="card-icon" id="icon"><img id="wicon" src="" alt="Weather icon"></p>
+              <img class="card-icon" id="wicon-2" src="" alt="Weather icon">
               <p class="card-temp" id="card-temp-2">Temp:</p>
               <p class="card-wind" id="wind-2">Wind:</p>
               <p class="card-humidity" id="humid-2">Humidity:</p>
@@ -70,7 +73,7 @@
           <div class="card col-sm" style="background-color: #1b3752; color: white;">
             <div class="card-body" id="conditions">
               <h4 class="card-title" id="card-date-3">Date</h4>
-              <p class="card-icon" id="icon-3">Icon</p>
+              <img class="card-icon" id="wicon-3" src="" alt="Weather icon">
               <p class="card-temp" id="card-temp-3">Temp:</p>
               <p class="card-wind" id="wind-3">Wind:</p>
               <p class="card-humidity" id="humid-3">Humidity:</p>
@@ -79,7 +82,7 @@
           <div class="card col-sm" style="background-color: #1b3752; color: white;">
             <div class="card-body" id="conditions">
               <h4 class="card-title" id="card-date-4">Date</h4>
-              <p class="card-icon" id="icon-4">Icon</p>
+              <img class="card-icon" id="wicon-4" src="" alt="Weather icon">
               <p class="card-temp" id="card-temp-4">Temp:</p>
               <p class="card-wind" id="wind-4">Wind:</p>
               <p class="card-humidity" id="humid-4">Humidity:</p>
@@ -88,7 +91,7 @@
           <div class="card col-sm" style="background-color: #1b3752; color: white;">
             <div class="card-body" id="conditions">
               <h4 class="card-title" id="card-date-5">Date</h4>
-              <p class="card-icon" id="icon-5">Icon</p>
+              <img class="card-icon" id="wicon-5" src="" alt="Weather icon">
               <p class="card-temp" id="card-temp-5">Temp:</p>
               <p class="card-wind" id="wind-5">Wind:</p>
               <p class="card-humidity" id="humid-5">Humidity:</p>
@@ -98,6 +101,9 @@
       </div>
     </div>
   </main>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="./js/script.js"></script>
+  
 </body>
 </html>
