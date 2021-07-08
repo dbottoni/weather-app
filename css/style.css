@@ -72,12 +72,8 @@
   border-radius: 5px;
 }
 
-.background {
-  background-color: red;
-}
-
-.red {
-  background-color: red;
+.buttonList {
+  background-color: orange;
 }
 
 @media only screen and (max-width: 733px) {

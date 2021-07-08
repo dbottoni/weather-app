@@ -28,16 +28,9 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
     
     city.innerHTML = nameValue;
     date.innerHTML = currentHour;
-    temp.innerHTML = "Temp: " + tempValue;
+    temp.innerHTML = "Temp: " + tempValue + 'F';
     wind.innerHTML = "Wind Speed: " + windValue;
     humidity.innerHTML = "Humidity: " + humidValue + "%";
-
-    // console.log(data.weather);
-    //   var iconcode = data.weather[0].icon;
-      
-    //   var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
-      
-    //   $('#wicon').attr('src', iconurl);
   
 
     fetch (`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&appid=fabb0e1d664af0eebed6cbacc7200253`)
@@ -48,54 +41,39 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
       console.log(data); 
       uvindex.innerHTML= "UV Index: " + uvValue;
       
-      // var uv = [0,1,2,3,4,5];
-      // for (var i = 0; i < uv.length; i++){
-  
-      // if (uvValue > 0 && uvValue <= 2) {
-      //   $(`#uv-color${uv[i]}`).css("background-color", "red").css("color", "wjite");
-      // }
-      // }
-
-      // Insert Date in Cards
-          
-
-      // Insert Temp in Cards
-      var cardTemp = [1,2,3,4,5]; 
-
-      for (var i = 0; i < cardTemp.length; i++){
+        var dateFive = [1,2,3,4,5];
+        for (var i = 0; i < dateFive.length; i++){
         
-        var tempDay = Math.round(((parseFloat(data['hourly'][i]['temp'])-273.15)*1.8)+32) + '&deg';        
-        var tempEl = document.getElementById(`card-temp-${cardTemp[i]}`);
+        var cardDate = moment.unix(data.daily[i].dt).format('MM/DD/YY');
+        var dateEl = document.getElementById(`card-date-${dateFive[i]}`);
+        dateEl.innerHTML = cardDate;
+
+
+        }
+      // Insert Data in Cards
+      var cardIndex = [1,2,3,4,5]; 
+
+      for (var i = 0; i < cardIndex.length; i++){
+        
+        // var cardDate = moment.unix(data.daily[i].dt).format('MM/DD/YY');
+        // var dateEl = document.getElementById(`card-date-${cardIndex[i]}`);
+        // dateEl.innerHTML = cardDate;
+
+        var tempDay = Math.round(((parseFloat(data['hourly'][i]['temp'])-273.15)*1.8)+32) + '&deg' + 'F';        
+        var tempEl = document.getElementById(`card-temp-${cardIndex[i]}`);
         tempEl.innerHTML = `Temp: ${tempDay}`;   
         
         var iconcode = data.daily[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         
-        $(`#wicon-${cardTemp[i]}`).attr('src', iconurl);
+        $(`#wicon-${cardIndex[i]}`).attr('src', iconurl);
 
         var windDay = data['daily'][i]['wind_speed'] + 'MPH';
-        var windEl = document.getElementById(`wind-${cardTemp[i]}`);
+        var windEl = document.getElementById(`wind-${cardIndex[i]}`);
         windEl.innerHTML = `Wind: ${windDay}`;
 
-       }
-
-      //Insert Wind Speed in Cards
-      // var windDate = [1,2,3,4,5];
-      // for (var i = 0; i < windDate.length; i++){
-        
-      //   var windDay = data['daily'][i]['wind_speed'] + 'MPH';
-      //   var windEl = document.getElementById(`wind-${windDate[i]}`);
-      //   windEl.innerHTML = `Wind: ${windDay}`;
-      //   //console.log(windEl);
-
-      //  }
-        
-       //Insert Humidity in Cards
-      var cardHumid = [1,2,3,4,5];
-      for (var i = 0; i < cardHumid.length; i++){
-        
         var humidDay = data['daily'][i]['humidity'];
-        var humidEl = document.getElementById(`humid-${cardHumid[i]}`);
+        var humidEl = document.getElementById(`humid-${cardIndex[i]}`);
         humidEl.innerHTML = `Humidity: ${humidDay}%`;
 
        }
