@@ -42,8 +42,7 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?q='+ cityName +
         $(`#uv-color`).addClass("high");
       }
 
-    
-      
+          
         var dateFive = [1,2,3,4,5];
         for (var i = 0; i < dateFive.length; i++){
         
