@@ -1,4 +1,9 @@
 # weather-app
+* This app returns the current and five-day weather forecast when inputting a city name
+* The app intuitively tells the user if the UV index is favorable or unfavorable 
+
+## Deployed Site Link
+* https://dbottoni.github.io/weather-app/
 
 ## Acceptance Criteria
 * GIVEN a weather dashboard with form inputs
@@ -19,3 +24,5 @@
 
 ### Image of Current Site
 ![image](https://user-images.githubusercontent.com/72705457/124992531-123d3880-e011-11eb-94ce-121ce84cab53.png)
+
+
