@@ -12,11 +12,6 @@
   width: auto;
 }
 
-/* .content{
-  left: 25%;
-  right: auto;
-} */
-
 .container2 {
   border: 1px solid black;
   width: 85%;
@@ -66,14 +61,28 @@
   text-align: left;
 }
 
+.low {
+  background-color: green;
+  color: white;
+  width: 150px;
+}
+
+.moderate {
+  background-color: coral;
+  color: white;
+  width: 150px;
+}
+
+.high {
+  background-color: red;
+  color: white;
+  width: 150px;
+}
+
 #btn {
   width: 200px;
   margin-bottom: 5px;
   border-radius: 5px;
-}
-
-.buttonList {
-  background-color: orange;
 }
 
 @media only screen and (max-width: 733px) {
