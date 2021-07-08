@@ -64,19 +64,22 @@
 .low {
   background-color: green;
   color: white;
-  width: 150px;
+  width: 125px;
+  border-radius: 5px;
 }
 
 .moderate {
   background-color: coral;
   color: white;
-  width: 150px;
+  width: 125px;
+  border-radius: 5px;
 }
 
 .high {
   background-color: red;
   color: white;
-  width: 150px;
+  width: 125px;
+  border-radius: 5px;
 }
 
 #btn {
